@@ -13,11 +13,15 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class MQSender {
 	@Autowired
-	AmqpTemplate amqpTemplate;
+	private AmqpTemplate amqpTemplate;
 	public void send(Object message) {
 		String msg = JsonUtil.beanToString(message);
-		log.info("send message : "+message);
+		//log.info("send message : "+message);
 		amqpTemplate.convertAndSend(RabbitQueueConfig.QUEUE,msg);
 	
+	}
+	
+	public void sendStr(Object message) {
+		amqpTemplate.convertAndSend(RabbitQueueConfig.TOPIC_QUEUE1,message);
 	}
 }

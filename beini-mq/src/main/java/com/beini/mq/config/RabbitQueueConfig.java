@@ -85,7 +85,7 @@ public class RabbitQueueConfig {
 	
 	@Bean
 	public Queue imoocQueue() {
-		return new Queue(IMOOC_QUEUE,true);
+		return new Queue(QUEUE,true);
 	}
 	
 	@Bean("product.insert")

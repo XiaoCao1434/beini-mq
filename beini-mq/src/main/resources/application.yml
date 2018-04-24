@@ -11,7 +11,7 @@ spring:
     password: root
     
     filters: stat,wall,log4j
-    maxActive: 20
+    maxActive: 150
     initialSize: 1
     maxWait: 60000
     minIdle: 1
@@ -40,9 +40,9 @@ spring:
     virtual-host: /
     listener:
       simple:
-        concurrency: 10
+        concurrency: 100
         max-concurrency: 100
-        prefetch: 1
+        prefetch: 100
         auto-startup: true
         default-requeue-rejected: true
     template:
