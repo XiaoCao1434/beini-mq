@@ -1,7 +1,6 @@
 package com.beini.beinimq;
 
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,23 +10,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import com.beini.core.utils.JsonUtil;
 import com.beini.mq.BeiniMqApplication;
-import com.beini.mq.controller.BaseController;
 import com.beini.mq.entity.TestTemp;
 import com.beini.mq.imoocSender.MQSender;
-import com.beini.mq.sender.RabbitSender;
 import com.beini.mq.thread.SendThread;
-
-import lombok.extern.slf4j.Slf4j;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes=BeiniMqApplication.class)
-@Slf4j
 public class BeiniMqApplicationTests {
 	@Autowired
-	private RabbitSender rabbitSender;
-	@Autowired
 	private MQSender mqSender;
-	@Autowired
-	private BaseController controller;
 	
 	@Autowired
 	private SendThread sendThread;
