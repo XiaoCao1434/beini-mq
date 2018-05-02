@@ -14,7 +14,11 @@ import org.springframework.context.annotation.Primary;
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
 import com.alibaba.druid.support.http.WebStatFilter;
-
+/**
+ * Druid配置类
+ * @author lb_chen
+ *
+ */
 @Configuration
 public class DruidConfig {
 
@@ -70,7 +74,7 @@ public class DruidConfig {
 	private String logSlowSql;
 
 	@Bean
-	// @Primary 注解作用是当程序选择dataSource时选择被注解的这个
+	/*@Primary 注解作用是当程序选择dataSource时选择被注解的这个*/
 	@Primary
 	public DataSource dataSource() {
 		DruidDataSource datasource = new DruidDataSource();
