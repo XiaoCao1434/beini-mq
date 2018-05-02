@@ -2,18 +2,15 @@ package com.beini.mq.thread;
 
 import java.util.Random;
 
-import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.beini.core.utils.JsonUtil;
-import com.beini.mq.config.RabbitQueueConfig;
 import com.beini.mq.entity.TestTemp;
 import com.beini.mq.imoocSender.MQSender;
 @Component
 public class SendThread {
-	@Autowired
-	private AmqpTemplate amqpTemplate;
+	/*@Autowired
+	private AmqpTemplate amqpTemplate;*/
 	@Autowired
 	private MQSender mqSender;
 	

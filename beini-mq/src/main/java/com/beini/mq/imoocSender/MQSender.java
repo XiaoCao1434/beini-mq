@@ -16,7 +16,7 @@ public class MQSender {
 	private AmqpTemplate amqpTemplate;
 	public void send(Object message) {
 		String msg = JsonUtil.beanToString(message);
-		//log.info("send message : "+message);
+		log.info("send message : "+message);
 		amqpTemplate.convertAndSend(RabbitQueueConfig.QUEUE,msg);
 	
 	}

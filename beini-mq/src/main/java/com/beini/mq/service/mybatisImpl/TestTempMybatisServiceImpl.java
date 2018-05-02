@@ -2,8 +2,6 @@ package com.beini.mq.service.mybatisImpl;
 
 import java.util.List;
 
-import org.springframework.stereotype.Service;
-
 import com.beini.mq.entity.TestTemp;
 import com.beini.mq.service.TestTempService;
 
