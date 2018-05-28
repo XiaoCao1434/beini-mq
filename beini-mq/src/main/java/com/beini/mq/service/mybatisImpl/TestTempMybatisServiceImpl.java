@@ -15,7 +15,6 @@ public class TestTempMybatisServiceImpl implements TestTempService {
 
 	@Override
 	public int save(TestTemp bean) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 
